@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/server.js",
-    "dev": "nodemon src/server.js",
-    "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
+    "start": "ts-node src/server.ts",
+    "typeorm": "ts-node-dev node_modules/typeorm/cli.js",
+    "dev": "ts-node-dev src/server.ts"
   },
   "dependencies": {
     "dotenv": "^11.0.0",

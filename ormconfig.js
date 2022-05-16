@@ -5,11 +5,11 @@ const devEnv = {
     database: process.env.DB,
     username: process.env.USER,
     password: process.env.PASSWORD,
-    entities: ['./src/entities/**/*.js'],
-    migrations: ['./src/database/migrations/*.js'],
+    entities: ['./src/entities/**/*.ts'],
+    migrations: ['./src/database/migrations/*.ts'],
     cli: {
         migrationsDir: './src/database/migrations',
-        entitiesDir: ['./src/entities/**/*.js'],
+        entitiesDir: ['./src/entities/**/*.ts'],
 
     },
     logging: true,
@@ -20,7 +20,7 @@ const prodEnv = {
     type: 'postgres',
     url: process.env.DATABASE_URL,
     entities: ['./dist/entities/**/*.ts'],
-    migrations: ['./dist/database/migrations/*.js'],
+    migrations: ['./dist/database/migrations/*.ts'],
     cli: {
         migrationsDir: './dist/database/migrations',
         entitiesDir: ['./src/entities'],
