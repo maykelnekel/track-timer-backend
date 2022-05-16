@@ -1,10 +1,10 @@
-import {Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, Timestamp, OneToMany} from 'typeorm'
-import TimerExecutions from './timer_executions.entitie';
+import {Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, OneToMany} from 'typeorm'
+import TimerExecutions from './timer_executions.entity';
 
-@Entity('timers')
+@Entity()
 export default class Timer{
     @PrimaryGeneratedColumn()
-    id!: number;
+    readonly id!: number;
 
     @Column()
     activity!: string;

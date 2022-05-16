@@ -1,12 +1,11 @@
 import { Column, CreateDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
-import Timer from "./timers.entitie";
-
+import Timer from "./timers.entity";
 
 @Entity()
 export default class TimerExecutions{
 
     @PrimaryGeneratedColumn()
-    id!: number
+    readonly id!: number
 
     @CreateDateColumn({ type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)" })
     created_at!: Date;
